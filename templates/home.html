@@ -1,0 +1,138 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %} <title>HOME</title>{% endblock %}
+
+{% block body_block %}
+<style>
+  img {
+
+
+    transition: transform .2s;
+    /* Animation */
+
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  h6{margin-left: 0px;
+  }
+</style>
+<center>
+  <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://v3img.voot.com/v3Storage/assets/bbott-16x9-logo-1691849184698.jpg" class="d-block w-100 " height="400px" alt="Wild Landscape"/>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i0.wp.com/moviegalleri.net/wp-content/uploads/2019/12/Mahesh-Babu-Sarileru-Neekevvaru-Movie-Jan-11-Release-Posters-HD-Wallpapers-67935ba.jpg?fit=3000%2C1412&ssl=1" class="d-block w-100 " height="400px" alt="Camera"/>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.ytimg.com/vi/0ZwyCRhhK60/maxresdefault.jpg" class="d-block w-100 " height="400px" alt="Exotic Fruits"/>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- MDB --><br><br>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/800.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+        height="200px" width="260px" />
+      <img src="{% static 'images/103.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+        height="200px" width="260px" />
+      <img src="{% static 'images/391_aa.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+        height="200px" width="260px" />
+      <img src="{% static 'images/800.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+        height="200px" width="260px" />
+      <img src="{% static 'images/800.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+        height="200px" width="260px" />
+    </div>
+  </div>
+  <div align="center"><img src="{% static 'images/_0.avif' %}" height="135px" width="80%" id="90"></div>
+  <h1>comming soon</h1>
+  <div><img src="{% static 'images/k90.webp' %}" alt="Townhouses and Skyscrapers" height="400px" width="650px" alt="">
+    <img src="{% static 'images/60.webp' %}" alt="Townhouses and Skyscrapers" height="400px" width="650px" alt="">
+  </div><br>
+  <div class="container-fluied">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/4A7A688C-967D-40FF-9E42-16C5D3572402/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/5EEE963C-D163-4FE1-81B4-3EE3EE6AC342/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/5705F945-8BEA-428A-BB82-9FB0098ACFDD/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/596DA7A7-76E1-40CD-809F-EA9D77E57213/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/AE587FAA-F596-4750-8635-915F1D543E55/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://image-resizer-cloud-api.akamaized.net/image/D21B8851-4605-4FE8-896A-8F09CB4FA825/0-2x3.jpg?width=240"
+          class="img" width="230px" height="340px">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluied">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/trial-period_launch-3x4-1689869191199.jpg?imformat=chrome"
+          alt="" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/bloody_daddy_3x4-1689152042847.jpg?imformat=chrome"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/bhediya-3x41-1689156291806.jpg?imformat=chrome"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/kaccheylimbu-3x4-clean-1687762679200.jpg?imformat=chrome"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/3x4-1687168088899.jpg?imformat=chrome"
+          class="img" width="230px" height="340px">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+        <img
+          src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/roadies-3x4-1691820640845.jpg?imformat=chrome"
+          class="img" width="230px" height="340px">
+      </div>
+    </div>
+  
+  
+</div>
+</center>
+{% endblock %}

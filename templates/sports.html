@@ -1,0 +1,168 @@
+{% extends 'dummy.html' %}{% load static %}
+{% block title %} <title>Sports</title>{% endblock %}
+
+{% block body_block %}
+<style>
+  img {
+
+
+      transition: transform .2s; /* Animation */
+      
+      margin: 0 auto;
+      border-radius :20px;
+      
+    }
+    #90{color: rgb(247, 6, 6);
+       margin-top: 0;
+      position: absolute;
+    font-size: 30px;}
+    
+    img:hover {
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    h1{color: aliceblue;}
+
+</style>
+
+
+    <article>
+        <form >
+          <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-mdb-target="#carouselExampleCaptions"
+                  data-mdb-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-mdb-target="#carouselExampleCaptions"
+                  data-mdb-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-mdb-target="#carouselExampleCaptions"
+                  data-mdb-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src=https://v3img.voot.com/resizeMedium,w_960,h_540/v3Storage/assets/promo_tray_carousal-1691773873146.jpg?imformat=chrome" class="d-block w-100" alt="Wild Landscape" height="400px" width="500px">
+                  <div class="carousel-caption d-none d-md-block">
+                    <strong><h5 id="90">.Live</h5></strong>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Pv-7N1izrkdeLYordOJq4q-M32PGoHg_ZA&usqp=CAU" alt="Townhouses and Skyscrapers" class="d-block w-100" alt="Camera" height="400px" width="500px">
+                  <div class="carousel-caption d-none d-md-block">
+                    <strong><h5 id="90">.Live</h5></strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://v3img.voot.com/resizeMedium,w_960,h_540/v3Storage/assets/moto_gp_bharat_promo_tray-1691844499412.jpg?imformat=chrome" class="d-block w-100" alt="Exotic Fruits" height="400px" width="500px">
+                  <div class="carousel-caption d-none d-md-block">
+                    <strong><h5 id="90">.Live</h5></strong>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            </form></article><br><br>
+
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://v3img.voot.com/resizeMedium,w_960,h_540/v3Storage/assets/moto_gp_bharat_promo_tray-1691844499412.jpg?imformat=chrome" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="{% static 'images/103.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="{% static 'images/391_aa.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="{% static 'images/800.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="{% static 'images/800.webp' %}" class="img-fluid rounded-pill" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+              </div>
+            </div>
+            <h1>WI vs IND T20 Serice</h1>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/wi_vs_ind_odi_replay_vertical_2-1691409915450.jpg?imformat=chrome" class="img" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/wi_vs_ind_replay_ver-1691409146045.jpg?imformat=chrome" class="img" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/wi_vs_ind_odi_replay_vertical_final_3-1691523248910.jpg?imformat=chrome" class="img" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/wi_vs_ind_odi_replay_vertical-1691868201341.jpg?imformat=chrome" class="img" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+                <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/wi_vs_ind_t20i_replay_vertical-1691960038844.jpg?imformat=chrome" class="img" alt="Townhouses and Skyscrapers"
+                  height="200px" width="260px" />
+              </div>
+            </div>
+
+            <h1>Terrific Tons</h1>
+            <div class="container-fluied">
+              <div class="row">
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/gill%20(1)-1684255681977.png" class="img" width="230px" height="340px">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/jaiswal_100_vertical-1684702731958.png?imformat=chrome" class="img" width="230px" height="340px">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/surya-1684255366705.png?imformat=chrome" class="img" width="230px" height="340px">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/gill_top_knocks_vertical-1685121275095.png?imformat=chrome" class="img" width="230px" height="340px">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/brook-1684255145402.png?imformat=chrome" class="img" width="230px" height="340px">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                      <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/100_vertical-1684689519459.png?imformat=chrome" class="img" width="230px" height="340px">
+                  </div>
+              </div>
+              
+              <h1> Top Hitters Of The Season 🔥</h1>
+              <div class="container-fluied">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/athletic_real_madrid_vertical-1691874646488.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/ligue_1_football_gold_vertical-1690888810397.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/rathod_vertical-1690367360767.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/sushil_vertical-1690365928062.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/highlights_vertical_final-1685402775127.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                        <img src="https://v3img.voot.com/resizeMedium,w_810,h_1080/v3Storage/assets/inside-story-3x4-1674589282320.jpg?imformat=chrome" class="img" width="230px" height="340px">
+                    </div>
+                </div>
+    
+
+
+    
+  
+{% endblock %}

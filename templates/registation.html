@@ -1,0 +1,62 @@
+{% extends 'dummy.html' %} 
+
+   {% block title %}
+   <title>Registation</title>
+   {% endblock %}
+   {% block body_block %}
+   <style>
+    h1{color: deeppink;}
+    body{
+        background-image: url('https://t4.ftcdn.net/jpg/05/81/22/71/360_F_581227173_zhXvJ17kwhhAwcixMJL9iCYnNHifuyVA.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    textarea{height: 100px;
+        width: 200px;
+        border-bottom-left-radius: 40%;
+        border-top-left-radius: 40%; 
+        border-top-right-radius: 40%;
+        border-bottom-right-radius: 40%;}
+    
+    
+   </style>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+
+
+    <center>
+        <h1>Registation...</h1>
+        <br><br><br>
+        <form method="POST">
+            {% csrf_token %}
+            <table cellpadding="6px" class="text-light">
+                {{ufo.as_table}}
+                {{pfo.as_table}}
+            </table><br><br><br>
+             <input type="submit" class="btn btn-success" width="10%" value="REGISTER">
+        </form>
+        <div>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-google "></i></a>
+            
+        </div>
+    </center>
+    
+    <!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends 'dummy.html' %}{% load static %}
+{% block title %} <title>Login</title>{% endblock %}
+
+{% block body_block %}
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+    #siva{
+        font-family: sans-serif;	
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('');
+    }
+    
+    .container-io{
+        width: 380px;
+        margin-left: 600px;
+        border-radius: 25px;
+        background-color: rgba(9, 9, 9, 0.843);
+        box-shadow: 0 0 17px #3fff05;
+    }
+    
+    .header {
+        text-align: center;
+        padding-top: 75px;
+    }
+    
+    .header h1 {
+        color: #4d4545;
+        font-size: 45px;
+        margin-bottom: 80px;
+    }
+    
+    .main {
+        text-align: center;
+    }
+    
+    .main input, button {
+        width: 300px;
+        height: 40px;
+        background-color: rgb(246, 184, 69);
+        border:none;
+        outline: none;
+        padding-left: 40px;
+        box-sizing: border-box;
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 40px;
+        border-bottom-left-radius: 25%;
+        border-top-left-radius: 25%; 
+        border-top-right-radius: 25%;
+        border-bottom-right-radius: 25%;
+    }
+    
+    .main button {
+        padding-left: 0;
+        background-color: #2271f8;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 70px;
+    }
+    
+    .main button:hover {
+        box-shadow: 2px 2px 5px #60fa07;
+        background-color: #2b2d31;
+    }
+    .main input:hover {
+        box-shadow: 2px 2px 5px #0491d7;
+        background-color: #ddd;
+    }
+    
+    .main span {
+        position: relative;
+    }
+    
+    .main i {
+        position: absolute;
+        left: 15px;
+        color: #333330;
+        font-size: 16px;
+        top: 2px;
+    }
+    #ho{margin:0px;
+       position: absolute;
+    color: rgb(6, 6, 7);}
+    p{font-size: 25px;}
+    #ho:h1{font-size: 35px;
+         }
+    #go{color: rgba(7, 255, 28, 0.958);}
+   
+    .btn btn-success{height: fit-content;
+                width: fit-content;}
+    .messages {
+        list-style-type: none;
+        padding: 0;
+    }
+    .message{
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid;
+        position: relative;
+        width: fit-content;
+        color: red;
+        border-radius: 8px;
+    }
+    .success{
+        color: red;
+        background-color: whitesmoke;
+    }
+    strong{
+        margin-left:-36px ;
+        
+    }
+    .close-btn{
+        position: absolute;
+        top: -17px;
+        right: -3px;
+        border: none;
+        background-color: white;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+        color: #333330;
+        width:5px;
+        justify-content:flex-start;
+        height:23px;
+    }
+</style>
+<center id="siva">
+    
+    <form method="POST" class="animate__heartBeat">
+      {% csrf_token %}
+    <div class="container-io" >
+
+        <div class="header">
+            {% if messages %}
+    <ul class="messages">
+    {% for ko in messages %}
+    <li class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+        {{ko}}
+        <button class="close-btn" on-click="closeMessage(this)"><strong>&times;</strong></button>
+    </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+            <h1 id="go">login</h1>
+        </div>
+        <div class="main">
+            <form>
+                <span>
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" name="un">
+                </span><br>
+                <span>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="password" name="pw">
+                </span><br>
+                    <button><input type="submit"></button>
+                    <input type="reset">
+            </form>
+        </div>
+    </div>
+
+</center>
+
+<script>
+    function closeMessage(button) {
+        var messageElement = button.parentElement;
+        messageElement.style.opacity = "0";
+        setTimeout(function() {
+            messageElement.style.display = "none";
+        }, 900);
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        var messages = document.querySelectorAll(".message");
+        messages.forEach(function(message){
+            setTimeout(function(){
+                message.style.opacity =  "0";
+                setTimeout(function(){
+                    message.style.dispaly = "none";
+                }, 900);
+            }, 9000);
+        });
+    });
+</script>
+{% endblock %}

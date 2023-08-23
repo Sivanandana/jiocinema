@@ -1,0 +1,213 @@
+{% extends 'dummy1.html' %}
+{% block title %}<title>registerdummy1</title>{% endblock %}
+
+{% block body_block %}
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+
+
+
+.form-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  padding: 70px;
+  width: 450px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.form-wrapper h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.form-wrapper form {
+  margin: 25px 0 65px;
+}
+
+form .form-control {
+  height: 50px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-control input {
+  height: 100%;
+  width: 100%;
+  background: #474141;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #f5e8e8;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+  background: #302c2c;
+  padding: 16px 20px 0;
+}
+
+.form-control label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #988a8a;
+  transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+
+form button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1rem;
+  background: #f80296;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: 25px 0 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+form button:hover {
+  background: #4daff5;
+  box-shadow: 0 0 17px #fa01bc;
+}
+
+.form-wrapper a {
+  text-decoration: none;
+}
+
+.form-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.form-wrapper :where(label, p, small, a) {
+  color: #b3b3b3;
+}
+
+form .form-help {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .remember-me {
+  display: flex;
+}
+
+form .remember-me input {
+  margin-right: 5px;
+  accent-color: #292c2c;
+}
+
+form .form-help :where(label, a) {
+  font-size: 0.9rem;
+}
+
+.form-wrapper p a {
+  color: #fff;
+}
+
+.form-wrapper small {
+  display: block;
+  margin-top: 15px;
+  color: #b3b3b3;
+}
+
+.form-wrapper small a {
+  color: #0071eb;
+}
+
+@media (max-width: 740px) {
+  body::before {
+    display: none;
+  }
+
+
+
+  .form-wrapper {
+    width: 100px;
+    top: 43%;
+    margin-left: 500px;
+  }
+
+  .form-wrapper form {
+    margin: 25px 0 40px;
+  }
+}
+#90{margin-bottom: 50px;}
+h2{color: rgb(252, 13, 93);
+   background-color: rgb(18, 10, 10);
+   margin-top: 20px;}
+  u{color: rgb(245, 8, 87);}
+  textarea{height: 50px;
+          width: 200px;
+          background-color: #302c2c;
+          color: aliceblue;}
+  input{background-color: #302c2c;
+      color: aliceblue;
+       border-radius: 10px;
+       padding-top: 9px;}
+</style>
+<body >
+  
+  
+      <div class="form-wrapper">
+        <h2 class="animate__heartBeat"><u>Register...</u></h2>
+    
+          <form method="POST">
+            {% csrf_token %}
+            <table cellpadding="6px" class="text-light" >
+              <div class="form-control">
+                {{ufo.as_table}}
+                
+                {{pfo.as_table}}
+                </div>
+            </table>
+         
+          <button type="submit">Register</button>
+          <div class="form-help">
+            <div class="remember-me">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me">Remember me</label>
+            </div>
+            <a href="#">Need help?</a>
+          </div>
+          <div id="90">
+        </form>
+        <p>New to JioCinema <a href="#">Sign up now</a></p>
+        <small>
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          <a href="#">Learn more.</a>
+        </small>
+        </div>
+      
+      
+ </div>
+        
+      </body>
+
+{% endblock %}

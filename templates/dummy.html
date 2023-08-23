@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>dummy</title>{% endblock %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet"/>
+<style>
+    body{
+        background-color: rgb(41, 39, 39);
+        position: relative;
+    }
+  
+    
+        
+    
+    #p{
+        justify-content: left;
+    }
+    #9{justify-content: right;}
+    a:hover{
+    
+        background-color: black;
+        width: fit-content;
+    }
+    
+    .space{
+        
+        padding-right: 2px;
+        font-size: 3px;
+        padding-top: 5px;
+        color: antiquewhite;
+        left: 20px;
+    }
+    h4{font-size: 15px;}
+  
+    
+    #bg{color: aliceblue;
+    }
+    h5{color: rgb(11, 1, 10);}
+    img{
+        box-shadow: 30px black;
+        padding: 10px;
+    }
+    btn{   margin: -10px;
+      font-weight: bolder;}
+
+    #siva{
+          display: flex;
+          position: relative;
+    
+    
+    }
+    .hjk{margin-right: 0px;}
+
+    #si{display: flex;
+       position: relative;
+       }
+       nav{height:70px;}
+      .nvn
+      {
+        position: relative;
+       left: 700px;
+        top: 20px;
+        height: 20px;
+        width: 50px;
+      }
+      
+</style>
+</head>
+
+<body style="height: 100vh" class="bg-black">
+  
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-black">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+        
+              <!-- Search form -->
+ 
+                <div><a href="{% url 'subscribe' %}">
+                  <img src="{% static 'images/jio.png' %}" alt="" height="50px" width="100px" id="o"><strong id="bg"><h5 style="color: rgb(244, 7, 165);">JioCinema</h5></strong></a></div>
+               <div class="space">
+               <a href="{% url 'home' %}" class="btn btn-outline-light btn-rounded p-2.5"><h4>For You</h4></a>
+              <a href="{% url 'admin:index' %}" class="btn btn-outline btn-rounded p-2.5 "><h4>Admin</h4></a>  
+               <a href="{% url 'free' %}" class="btn btn-outline btn-rounded p-2.5"><h4>Free</h4></a>
+               <a href="{% url 'news' %}" class="btn btn-outline btn-rounded p-2.5"><h4>News</h4></a>
+                <a href="{% url 'sports' %}" class="btn btn-outline btn-rounded p-2.5"><h4>Sports</h4></a>
+                
+                {% if user.is_authenticated %}
+                
+            <!-- <a href="" class="btn btn-outline btn-rounded p-2.5"><h4>changepassword</h4></a>
+            -->
+                 {% endif %}
+                 <div id="search">
+                  <input type="search" class=" nvn" placeholder='Search here..'/>
+
+                  <span class="input-group-text border-0"><i class="fas fa-search nvn"></i></span></div>
+          </div>
+          
+   
+          <li class="nav-item dropdown" id="hjk">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="{% static 'images/r.svg' %}" class="rounded-circle" height="60px" alt="Avatar"
+                loading="lazy" /></a>
+           <!----------------------------------
+              <a href="{% url 'admin:index' %}" class="nav-link">Admin</a>
+        
+
+            ----------- -->
+            <ul class="dropdown-menu dropdown-menu-end bg-success text-black" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item"  id="pro" href="{% url 'display_profile' %}"><h5>profile</h5></a></li>
+              <li><a class="dropdown-item" href="#"><h5>Settings</h5></a></li>
+              <li><a class="dropdown-item" id="passw" href="{% url 'user_logout' %}"><h5>Logout</h5></a></li>
+            </ul>
+          </li>
+        </ul>
+          </nav>
+
+          {% block body_block %}
+
+
+          {% endblock %}
+          <footer class="text-center text-lg-start bg-black text-muted" class="footer">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+              <!-- Left -->
+              <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+              </div>
+              <!-- Left -->
+        
+              <!-- Right -->
+              <div>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+        
+            <!-- Section: Links  -->
+            <section class="">
+              <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                  
+                    <p>
+                     Sports <br>
+                     Premium<br>
+                     WI vs IND Schedule
+                     <h6 class="text-uppercase fw-bold mb-4">
+                     <div style="display: flex;"> <img src="{% static 'images/net.png' %}" width="150px" height="200px">
+                      <img src="{% static 'images/youtube.png' %}" width="150px" height="200px">
+                  </div>
+                    </h6>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      <u style="color: blue;"> Location</u>
+                    </h6>
+                    <p>
+                      <a href="#!" class="text-reset">International</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Marathahalli</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Mumbai</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">National</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      <u style="color: blue;"> National Live</u>
+                    </h6>
+                    <p>
+                      <a href="#!" class="text-reset">News</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Games</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Movies</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Help</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+        
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4"><u style="color: brown;">Contact</u></h6>
+                    <p><i class="fas fa-home me-3 text-secondary"></i> New Delhi,N10012.India</p>
+                    <p>
+                      <i class="fas fa-envelope me-3 text-secondary"></i>
+                      JioCinema@200189.com
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 00000000008</p>
+                    <p><i class="fas fa-print me-3 text-secondary"></i> + 09 00700046589</p>
+                  </div>
+                  <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+              </div>
+            </section>
+           
+          </footer>
+          <!-- Footer -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+</body>
+</html>
